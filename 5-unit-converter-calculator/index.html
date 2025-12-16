@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator & Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="calculator">Calculator</button>
+            <button class="tab-btn" data-tab="converter">Unit Converter</button>
+        </div>
+
+        <!-- Calculator Tab -->
+        <div id="calculator" class="tab-content active">
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" id="calcDisplay" readonly value="0">
+                </div>
+                <div class="buttons">
+                    <button class="btn clear" onclick="clearDisplay()">C</button>
+                    <button class="btn operator" onclick="appendOperator('/')">/</button>
+                    <button class="btn operator" onclick="appendOperator('*')">×</button>
+                    <button class="btn operator" onclick="deleteLast()">←</button>
+
+                    <button class="btn" onclick="appendNumber('7')">7</button>
+                    <button class="btn" onclick="appendNumber('8')">8</button>
+                    <button class="btn" onclick="appendNumber('9')">9</button>
+                    <button class="btn operator" onclick="appendOperator('-')">−</button>
+
+                    <button class="btn" onclick="appendNumber('4')">4</button>
+                    <button class="btn" onclick="appendNumber('5')">5</button>
+                    <button class="btn" onclick="appendNumber('6')">6</button>
+                    <button class="btn operator" onclick="appendOperator('+')">+</button>
+
+                    <button class="btn" onclick="appendNumber('1')">1</button>
+                    <button class="btn" onclick="appendNumber('2')">2</button>
+                    <button class="btn" onclick="appendNumber('3')">3</button>
+                    <button class="btn operator" onclick="appendOperator('.')" style="font-size: 20px;">.</button>
+
+                    <button class="btn" onclick="appendNumber('0')" style="grid-column: 1/3;">0</button>
+                    <button class="btn equal" onclick="calculate()" style="grid-column: 3/5;">=</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unit Converter Tab -->
+        <div id="converter" class="tab-content">
+            <div class="converter">
+                <div class="converter-group">
+                    <label>Conversion Type:</label>
+                    <select id="conversionType" onchange="updateConversionOptions()">
+                        <option value="length">Length (Miles ↔ Kilometers)</option>
+                        <option value="temperature">Temperature (Fahrenheit ↔ Celsius)</option>
+                        <option value="weight">Weight (Pounds ↔ Kilograms)</option>
+                        <option value="volume">Volume (Gallons ↔ Liters)</option>
+                    </select>
+                </div>
+
+                <div class="converter-group">
+                    <label for="inputValue">From:</label>
+                    <div class="input-with-unit">
+                        <input type="number" id="inputValue" placeholder="Enter value" oninput="convertValue()">
+                        <select id="fromUnit" onchange="convertValue()">
+                            <option value="miles">Miles</option>
+                            <option value="km">Kilometers</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="converter-group">
+                    <label for="outputValue">To:</label>
+                    <div class="input-with-unit">
+                        <input type="text" id="outputValue" readonly placeholder="Result">
+                        <span id="toUnit">Kilometers</span>
+                    </div>
+                </div>
+
+                <button class="btn reset-btn" onclick="resetConverter()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

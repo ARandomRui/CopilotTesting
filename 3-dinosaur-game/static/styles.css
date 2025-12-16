@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f7f7f7;
+    color: #444;
+    display: flex;
+    justify-content: center;
+}
+.wrap {
+    margin-top: 28px;
+    text-align: center;
+}
+canvas {
+    display: block;
+    margin: 0 auto;
+    width: 900px;
+    max-width: 100%;
+    background: #f7f7f7;
+    border: 1px solid #dcdcdc;
+    image-rendering: pixelated;
+    cursor: pointer;
+}
+.help {
+    margin: 10px 0 0;
+    color: #777;
+    font-size: 14px;
+}
