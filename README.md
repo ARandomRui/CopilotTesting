@@ -11,6 +11,7 @@ Click here below to explore the sites created!
 To do list - (https://arandomrui.github.io/CopilotTesting/1-todo-list-app/)  
 Portfolio site - (https://arandomrui.github.io/CopilotTesting/2-portfolio-website/)  
 Calculator App - (https://arandomrui.github.io/CopilotTesting/5-unit-converter-calculator/)  
+Dinosaur Game - (https://cheerui.pythonanywhere.com/)
 
 
 
