@@ -106,3 +106,6 @@ Works on all modern browsers that support:
 ## License
 
 This is a learning/demonstration project inspired by the Chrome offline game.
+
+## Developer's own comment
+Terrible implementation, all stuffs are misaligned, presummably due to lack of training data, as antigravity does much better in this task.
