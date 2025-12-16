@@ -6,6 +6,8 @@ Five projects were selected based on the recommended prompts from
 **Tom's Guide – “AI billionaires’ advice to teens: master vibe coding”**  
 (https://www.tomsguide.com/ai/ai-billionaires-advice-to-teens-master-vibe-coding-heres-5-prompts-to-get-started).
 
+All the codes and readme files are also created by github copilot to test documentation properties. 
+
 Click here below to explore the sites created! 
 
 To do list - (https://arandomrui.github.io/CopilotTesting/1-todo-list-app/)  
